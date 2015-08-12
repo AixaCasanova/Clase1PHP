@@ -11,5 +11,5 @@ echo date ("d/m/Y h:h:s	A"). "<br>";
 echo date ("M d Y"). "<br>";
 echo date ("F d Y"). "<br>";
 echo date ("r"). "<br>";
-echo date "dia juliano:".("z"). "<br>";
+echo "dia juliano:" .date ("z"). "<br>";
 ?>
