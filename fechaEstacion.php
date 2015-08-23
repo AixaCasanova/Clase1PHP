@@ -1,3 +1,7 @@
+
+<h1>Fecha estacion PHP</h1>
+
+
 <?php 
   
  $mes = substr(date("d.m.y"),3,2 );
