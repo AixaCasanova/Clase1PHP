@@ -9,14 +9,16 @@ abstract class Persona
 private $_nombre;
 private $_apellido;
 private $_dni;
+private $_sexo;
 
 
-	function __construct($nom, $ape, $dni)
+	function __construct($nom, $ape, $dni, $sexo)
 	{
 		
 		$this->_nombre = $nom;
 		$this->_apellido = $ape;
 		$this->_dni = $dni;
+		$this->_sexo = $sexo;
 
 	}
 
@@ -27,6 +29,15 @@ return $this->_nombre;
 public function SetterNom($nom)
 {
 $this->_nombre = $nom;
+}
+
+public function getterSexo()
+{
+return $this->_sexo;
+}	
+public function SetterSexo($sexo)
+{
+$this->_nombre = $sexo;
 }
 
 public function getterApell()
@@ -50,7 +61,7 @@ $this->_dni = $dni;
 
 public function ToString()
 {
-	return "Nombre: " .  $this->getterNom() . "</br>" . "  Apellido: " . $this->getterApell() . "</br>" . "  Dni: " . $this->getterDni();
+	return "Nombre: " .  $this->getterNom() . "</br>" . "  Apellido: " . $this->getterApell() . "</br>" . "  Dni: " . $this->getterDni(). "</br>" . "  Sexo: " . $this->getterSexo();
 }
 
 
