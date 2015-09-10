@@ -39,7 +39,7 @@ $this->_sueldo = $sueldo;
 public function ToString()
 {
 	$padre = parent::ToString();
-	return $padre . "</br>" . " Legajo: " .  $this->getterLeg() .  "</br>" . "  Sueldo: " . $this->getterSueldo() ;
+	return $padre . "-" .  $this->getterLeg() . "-" . $this->getterSueldo() ;
 }
 
 public function Hablar($idioma)

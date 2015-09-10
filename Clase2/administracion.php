@@ -17,7 +17,22 @@ try
 	if($_POST["nombre"]=="" || $_POST["apellido"]=="" ||  $_POST["dni"]=="" ||  $_POST["legajo"]=="" || $_POST["sueldo"]=="" ||  $_POST["sexo"]==""){throw new Exception("Reingrese");}
 
 	$empleado = new Empleado($_POST["nombre"],$_POST["apellido"], $_POST["dni"], $_POST["legajo"] ,$_POST["sueldo"],$_POST["sexo"]);
-	echo $empleado->ToString();
+	/*echo $empleado->ToString();*/
+
+	$emp = fopen("../Clase2/TxtEmpleados.txt", "a+");
+	 $ex =  fwrite($emp,$empleado->ToString()."\r\n");
+	 if($ex> 0) 
+	 {
+	 	echo "escritura EXITOSA! ----> "; 
+		 
+     	echo "<a href='../Clase2/Mostrar.php'><input type='button' value='Ir a Mostrar.php'> </a>";   
+
+	 } 
+	 else 
+	 {
+	 	echo "<a href='../Clase2/index.html'><input type='button' value='Volver al indice'> </a>";
+	  
+	 }
 	$fabrica1 = new Fabrica("Redlink.sa");
 	$fabrica1->AgregarPersona($empleado);
 	/*echo "</br>"."Suma de sueldos: " . $fabrica1->CalcularSueldos();*/
@@ -35,6 +50,8 @@ catch(Exception $e)
 <?php 	
 }
 
-
+$destino = "../tmp/".$_FILES["archivo"]["name"];
+move_uploaded_file($_FILES["archivo"]["tmp_name"], $destino);
+ 
 
 ?>

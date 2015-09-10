@@ -61,7 +61,7 @@ $this->_dni = $dni;
 
 public function ToString()
 {
-	return "Nombre: " .  $this->getterNom() . "</br>" . "  Apellido: " . $this->getterApell() . "</br>" . "  Dni: " . $this->getterDni(). "</br>" . "  Sexo: " . $this->getterSexo();
+	return   $this->getterNom() . "-" . $this->getterApell(). "-" . $this->getterDni(). "-" . $this->getterSexo();
 }
 
 

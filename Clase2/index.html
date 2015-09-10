@@ -20,19 +20,18 @@
 		</div>
 		<div class="CajaInicio animated bounceInRight">
 			<h1>Ingreso de Empleados</h1>
-		
-			<!--CODIFICAR LOS ATRIBUTOS DEL FORMULARIO-->
-			<form id="FormIngreso" action="administracion.php" method="post"> 
-			
-			 
-            <span class="list-group-item-heading">Nombre:</span><input type="text" name="nombre" />
+		 
+		    <form id="FormIngreso" action="administracion.php" method="post" enctype="multipart/form-data" > 
+			<span class="list-group-item-heading">Nombre:</span><input type="text" name="nombre" />
             <span class="list-group-item-heading">Apellido:</span><input type="text" name="apellido" />
 			<span class="list-group-item-heading">Dni: </span><input type="text" name="dni" />
 			<span class="list-group-item-heading">Legajo: </span><input type="text" name="legajo" />
 			<span class="list-group-item-heading">Sueldo: </span><input type="text"name="sueldo" />
 			<span class="list-group-item-heading">Sexo: </span><input type="text" name="sexo" />	
-							
-				<input type="submit" class="MiBotonUTNMenu"  value="Enviar"/>
+			
+		 
+				<input type="file" name="archivo"/>	 
+			 	<input type="submit" class="MiBotonUTNMenu"  value="Enviar"/>
 				<input type="reset" class="MiBotonUTNMenu" value="Limpiar"/>
 			</form>
 
