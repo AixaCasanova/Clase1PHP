@@ -13,10 +13,17 @@ $op = fopen("../Clase2/TxtEmpleados.txt", "r");
 			$arrayUnEmpleado = explode("-", $RENGLON);
 			/*var_dump($arrayUnEmpleado);*/
 
-			if (var_dump($arrayUnEmpleado) > 0 ) {
+			//$var = var_dump($arrayUnEmpleado);
+			for ($i=0; $i < count($arrayUnEmpleado)  ; $i++) { 
+				# code...
+				if ($arrayUnEmpleado[$i] !=  null ) {
 				$empleado = new Empleado($arrayUnEmpleado[0],$arrayUnEmpleado[1], $arrayUnEmpleado[2],$arrayUnEmpleado[3] , $arrayUnEmpleado[4], $arrayUnEmpleado[5] );
-				echo $empleado->ToString();
+				echo $empleado->ToString()."</br>";
+
+				} 
 			}
+
+
 			
 		}
 

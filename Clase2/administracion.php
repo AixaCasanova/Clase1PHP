@@ -50,7 +50,9 @@ catch(Exception $e)
 <?php 	
 }
 
-$destino = "../tmp/".$_FILES["archivo"]["name"];
+
+$destino="../Clase2/Image.jpg";
+//$destino = "../tmp/".$_FILES["archivo"]["name"];
 move_uploaded_file($_FILES["archivo"]["tmp_name"], $destino);
  
 
