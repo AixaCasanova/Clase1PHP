@@ -18,12 +18,15 @@ $op = fopen("../Clase2/TxtEmpleados.txt", "r");
 				# code...
 				if ($arrayUnEmpleado[$i] !=  null ) {
 				$empleado = new Empleado($arrayUnEmpleado[0],$arrayUnEmpleado[1], $arrayUnEmpleado[2],$arrayUnEmpleado[3] , $arrayUnEmpleado[4], $arrayUnEmpleado[5] );
-				echo $empleado->ToString()."</br>";
+				
 
 				} 
 			}
-
-
+			 if ($RENGLON !=null || $RENGLON != "") {
+ 	 
+ 			echo $empleado->ToString()."</br>"; 
+			}
+			
 			
 		}
 
